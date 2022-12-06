@@ -3,8 +3,9 @@ import styles from "../styles/Home.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 
-import { Layout } from "./components/Layout";
+import { Layout, siteTitle } from "../components/Layout";
 import { getPostsData } from "../lib/post";
+import Head from "next/head";
 
 // SSGの場合
 export async function getStaticProps() {
@@ -37,7 +38,10 @@ type Props = {
 export default function Home(props: Props) {
   const { allPostsData } = props;
   return (
-    <Layout>
+    <Layout home>
+      <Head>
+        <title>{siteTitle}</title>
+      </Head>
       <section>
         <p className={utilStyles.headingSm}>
           私はエンジニアを目指している学生です。今はNext.jsを勉強しています。
