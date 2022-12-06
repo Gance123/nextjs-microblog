@@ -44,7 +44,7 @@ export default function Home(props: Props) {
       </Head>
       <section>
         <p className={utilStyles.headingSm}>
-          私はエンジニアを目指している学生です。今はNext.jsを勉強しています。
+          私はエンジニアを目指している学生です。今はNext.jsを勉強しています。とても楽しいです。
         </p>
       </section>
 
