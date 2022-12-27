@@ -4,10 +4,13 @@ import { Layout } from "../../components/Layout";
 import utilStyles from "../../styles/utils.module.scss";
 import Head from "next/head";
 
+// このページ一つで4つのページを生成できる
+// index.tsxでURLを決める
+// そのURLに基づくページをここで生成する
 export async function getStaticPaths() {
   const paths = getAllPostIds();
   return {
-    paths,
+    paths, //・・params:{id:id}
     fallback: false,
   };
 }
